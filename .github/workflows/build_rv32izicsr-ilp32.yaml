@@ -16,9 +16,7 @@ jobs:
         os:     [ubuntu-22.04, ubuntu-24.04]
         mode:   [newlib, linux, musl, uclibc]
         target: [rv32izicsr-ilp32, rv64gc-lp64d]
-        exclude:
-          - mode: musl
-            target: rv32izicsr-ilp32
+
     steps:
       - uses: actions/checkout@v2
 
