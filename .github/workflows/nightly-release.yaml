@@ -61,7 +61,10 @@ jobs:
             compiler: llvm
     steps:
       - uses: actions/checkout@v4
-
+        with:
+          submodules: recursive
+          fetch-depth: 0
+          
       - name: Remove unneeded frameworks to recover disk space
         run: sudo ./.github/cleanup-rootfs.sh
 
