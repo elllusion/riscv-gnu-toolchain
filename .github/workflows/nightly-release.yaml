@@ -51,7 +51,7 @@ jobs:
       matrix:
         os:       [ubuntu-22.04, ubuntu-24.04]
         mode:     [newlib, linux, musl, uclibc]
-        target:   [rv32gc-ilp32d, rv64gc-lp64d]
+        target:   [rv32izicsr-ilp32, rv32izicsr-ilp32d, rv32izigcsr-ilp32d, rv32gc-ilp32d, rv64gc-lp64d]
         compiler: [gcc, llvm]
         exclude:
           - mode: musl
