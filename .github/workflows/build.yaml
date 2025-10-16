@@ -12,7 +12,6 @@ on:
 env:
   submodule_paths: |
     binutils
-    dejagnu
     gcc
     gdb
     glibc
