@@ -33,10 +33,6 @@ jobs:
       key: ${{ steps.keygen.outputs.smcache_key }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive
-          fetch-depth: 0
-          persist-credentials: false
           
       - name: Remove unneeded frameworks to recover disk space
         run: sudo ./.github/cleanup-rootfs.sh
@@ -79,11 +75,7 @@ jobs:
             compiler: llvm
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive
-          fetch-depth: 0
-          persist-credentials: false
-          
+ 
       - name: Remove unneeded frameworks to recover disk space
         run: sudo ./.github/cleanup-rootfs.sh
 
@@ -157,11 +149,7 @@ jobs:
         sim:    [spike]
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive
-          fetch-depth: 0
-          persist-credentials: false
-          
+
       - name: Remove unneeded frameworks to recover disk space
         run: sudo ./.github/cleanup-rootfs.sh
 
@@ -198,11 +186,7 @@ jobs:
         target: [rv32izicsr-ilp32, rv32izicsr-ilp32d, rv32izigcsr-ilp32d, rv64gc-lp64d]
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive
-          fetch-depth: 0
-          persist-credentials: false
-          
+
       - name: Remove unneeded frameworks to recover disk space
         run: sudo ./.github/cleanup-rootfs.sh
 
