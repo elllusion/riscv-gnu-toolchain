@@ -1,4 +1,4 @@
-name: Build
+name: Build rv32izicsr-ilp32
 
 on:
   push:
